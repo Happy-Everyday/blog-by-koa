@@ -1,0 +1,23 @@
+{
+  "name": "blog-by-koa",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "王二狗",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.1.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.5",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^5.4.19"
+  }
+}
