@@ -21,9 +21,22 @@ const callbackHome = async ctx => {
     console.log(data)
     console.log(data.data.articleList)
     await ctx.render('home', {
-        title: "website",
+        title: "diary | XYTang",
         name: "World",
-        user: 'sessionUser'
+        headerTagList: [
+            {
+                title: '日记',
+                className: 'active'
+            },
+            {
+                title: '文章',
+                className: 'default'
+            },
+            {
+                title: '留言',
+                className: 'default'
+            }
+        ]
     })
 }
 

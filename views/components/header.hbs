@@ -1,4 +1,21 @@
 {{!-- 头部 --}}
-<nav>
-   header
-</nav>
+<header>
+    <div class="wrapper">
+        <a href="javascript:void(0);" class="icon">
+            <img src="/images/logo.png" alt="">
+        </a>
+        <ul class="nav">
+            {{#each headerTagList}}
+            <li>
+                <span class="nav-item {{className}}">{{title}}</span>
+            </li>
+            {{/each}}
+        </ul>
+        <div class="search-box">
+            <input type="text" placeholder="文章标题……">
+            <div class="search-icon">
+                <i class="iconfont icon-sousuo"></i>
+            </div>
+        </div>
+    </div>
+</header>
