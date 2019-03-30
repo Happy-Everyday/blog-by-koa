@@ -1,0 +1,16 @@
+
+h2 {
+    margin-top: 20px;
+    &:first-child {
+        margin: 0;
+    }
+}
+
+p.time { 
+    margin: 10px 0 30px 0;
+    color: #999;
+}
+
+.article-text {
+    color: #333;
+}

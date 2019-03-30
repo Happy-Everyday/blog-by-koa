@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/ico/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/iconfont.css">
+</head>
+<title>{{title}}</title>
+
+<body>
+    {{!-- 导航头部 --}}
+    {{> header }}
+    <div class='wrapper padding'>
+        <div class="content">
+            <!-- <div class="tips-wrapper">
+                <a :key='item.key' v-for="(item, index) in tipsList" href="javascript:void(0);" class="tips-item" :class="{'active': item.choosed}" @click="toggleChooseTips(index)">{{item.value}}</a>
+            </div> -->
+            <div class="article-wrapper">
+                {{#if hasArticle}}
+                    {{#each articleList}}
+                        <div class="article" id="{{_id}}" onclick="goToDetail('{{_id}}')">
+                            <div class="article-pic">
+                                <img src="/images/right-sidebar.jpg" alt="">
+                            </div>
+                            <div class="article-text">
+                                <p class="article-text-title">
+                                    <span class="title">{{articleTitle}}</span>
+                                    <span class="time">{{articleCreatedTime}}</span>
+                                </p>
+                                <p class="article-text-desc">
+                                    {{articleText}}
+                                </p>
+                                <p class="article-text-focus">
+                                    <span>阅读数{{articleReadNum}}</span>
+                                    <!-- <span>喜欢数{{item.articleLikeNum}}</span> -->
+                                    <!-- <span>评论数{{item.articleAplyNum}}</span> -->
+                                </p>
+                            </div>
+                        </div>
+                        {{!-- <div class="get-more" >加载更多……</div> --}}
+                    {{/each}}
+                {{else}}
+                    <div class="no-article">暂无数据……</div>
+                {{/if}}
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="right-sidebar-pic">
+                <img src="/images/right-sidebar.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    {{!-- 底部 --}}
+    {{> footer }}
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>
+        var gLocation = window.location.href;
+        var gRe = /^(http:\/\/|https:\/\/)|([^\/]*\/)/g;
+        var gArr = gLocation.match(gRe);
+        var gUrl = gArr[0] + gArr[1] ;
+        function goToDetail(id) {
+             window.location.href = gUrl + 'diary/' + id
+        }
+    </script>
+
+</html>

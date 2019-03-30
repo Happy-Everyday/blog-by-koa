@@ -1,13 +1,15 @@
 {{!-- 头部 --}}
 <header>
     <div class="wrapper">
-        <a href="javascript:void(0);" class="icon">
+        <a href="/" class="icon">
             <img src="/images/logo.png" alt="">
         </a>
         <ul class="nav">
             {{#each headerTagList}}
             <li>
-                <span class="nav-item {{className}}">{{title}}</span>
+                <a href="{{url}}">
+                    <span class="nav-item {{className}}">{{title}}</span>
+                </a>
             </li>
             {{/each}}
         </ul>

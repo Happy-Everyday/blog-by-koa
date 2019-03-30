@@ -86,21 +86,11 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var sayHi = __webpack_require__(1)
-
-sayHi('xuyue')
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-var sayHi = function(name) {
-    console.log(`Hello ${name}...`)
-}
+// diary.js
 
-module.exports = sayHi
+
 
 /***/ })
 /******/ ]);

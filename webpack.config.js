@@ -1,7 +1,7 @@
 const config = {
     mode: 'none',
     entry: {
-        home: './src/js/home.js'
+        diary: './src/js/diary.js'
     },
     output: {
       filename: '[name].bundle.js',
