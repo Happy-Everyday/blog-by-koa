@@ -1,7 +1,7 @@
 const axios = require('axios');
 const moment = require('moment')
-// const baseUrl = 'http://localhost:8888/'
-const baseUrl = 'https://www.bestlifebestyue.com/admin-api/'
+const baseUrl = 'http://localhost:8888/'
+// const baseUrl = 'https://www.bestlifebestyue.com/admin-api/'
 
 const callbackDiary = async ctx => {
     function getData() {
